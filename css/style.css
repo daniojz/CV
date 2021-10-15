@@ -1,0 +1,341 @@
+:root {
+    --color-bg: #a6deff;
+    --color-bg-header: rgb(220, 242, 255);
+
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-grey1: #686868;
+    --color-grey2: #D4D4D4;
+    --color-Primary1: #a6deff;
+    --color-Primary2: #003858;
+    --color-Secondary1: #D7E7FF;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+    margin: 0;
+
+    background-color: var(--color-bg);
+
+    line-height: 1.3;
+}
+header {
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    position: fixed;
+
+    background-color: var(--color-bg-header);
+}
+main {
+    width: 100%;
+    
+    padding-top: 80px;
+
+    background: rgb(166,222,255);
+    background: linear-gradient(0deg, rgba(166,222,255,1) 26%, rgba(220,242,255,1) 100%);
+}
+footer {
+    width: 100%;
+    height: 15%;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--color-black);
+    color: var(--bs-white);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+
+/*--------GENERAL----------*/
+.container {
+    width: 95%;
+    margin: auto;
+}
+.svgIcons {
+    font-size: 30px;
+    fill: var(--color-grey1);
+}
+.svgIcons:hover {
+    fill: var(--color-grey2);
+}
+.web-logo {
+    width: 45px;
+    height: 45px;
+}
+.socialNetworks li{
+    margin-left: 7px;
+    margin-right: 7px;
+
+    display: inline;
+}
+.socialNetworks {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*-------------NAV-MAIN---------------*/
+.nav-main{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-link-icon {
+    margin-left: 1%;
+}
+.nav-main li {
+    display: inline-block;
+}
+.nav-menu{
+    margin-right: auto;
+    margin-left: 2%;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+}
+.nav-menu li{    
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.nav-menu a {
+    color: var(--color-black);
+}
+.nav-menu a:hover {
+    color: rgba(0, 0, 0, 0.452);
+}
+.nav-main .socialNetworks {
+    margin-right: 3%;
+}
+/*-------------FOOTER---------------*/
+.footer-socialNetworks{
+    height: 100%;
+    width: 25%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-grey2);
+}
+.footer-socialNetworks ul{
+    display: flex;
+    align-items: center;
+}
+.footer-icon {
+    width: 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-links {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: 400;
+}
+.footer-links ul{
+    list-style: disc;
+    columns: 2;
+}
+.footer-links li{
+    padding-right: 30px;
+    list-style: none;
+    line-height: 3ex;
+}
+.footer-links a {
+    color: var(--color-white);
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/*-------------PRESENTACION---------------*/
+#presentacion{
+    width: 100%;
+    height: calc(100vh - 124px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgb(166,222,255);
+    background: linear-gradient(0deg, rgba(166,222,255,1) 26%, rgba(220,242,255,1) 100%);
+}
+.container-presentacion-text {
+    width: 45%;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: var(--color-black);
+}
+
+
+/*-------------CURRICULUM---------------*/
+#curriculum {
+    width: 100%;
+    height: 100%;
+
+    margin: auto; 
+
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--color-white);
+}
+#curriculum h2 {
+    margin-bottom: 5%;
+
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    color: var(--color-black);
+}
+#curriculum img {
+    height: 140px;
+    margin: 20px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: var(--color-black);
+}
+#curriculum ul {
+    margin: 5%;
+    float: left;
+
+    list-style: none;
+}
+#curriculum li {
+    margin-bottom: 3%;
+}
+.curriculum-container {
+    height: 100%;
+    margin: 3%;
+}
+.curriculum-container-card{
+    max-width: 600px;
+    margin-bottom: 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: var(--color-black);
+    
+    border-radius: 15px;
+    border: 1px solid  rgba(216, 216, 216, 0.61) ;
+    background-color: var(--color-white);
+    box-shadow: 2px 2px 20px 0px rgba(211, 211, 211, 0.651);
+
+}
+.curriculum-container-card:hover {
+    box-shadow: none;
+}
+
+/*-------------DESARROLLO SOFTWARE------------------------*/
+.ds-container-card {
+    width: 100%;
+    margin-bottom: 5%;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--color-black);
+
+    border-radius: 15px;
+    border: 1px solid  rgba(216, 216, 216, 0.61) ;
+    background-color:rgb(255, 255, 255);
+}
+.ds-container-title {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    color: var(--color-black);
+}
+.ds-container-card-descripcion {
+    margin: 3% 4% 1% 4%;
+
+    float: left;
+}
+.ds-container-card-descripcion h3 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    color: var(--color-black);
+}
+.ds-container-card-descripcion p{
+    display: block;
+}
+.ds-container-card-tecnologias {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ds-container-card img{
+    height: 270px;  
+}
+.ds-container-card-linkProyects {
+    margin: 3%;
+}
+/*-------------DESARROLLO WEB---------------*/
+.ds-web-title {
+    margin-right: 2%;
+    text-align: end;
+}
+.ds-container-card-tecnologias-end{
+    width: 50%;
+    margin: 3%;
+    text-align: center;
+}
+/*-------------DESARROLLO DE APP´S ANDROID---------------*/
+.ds-android-title {
+    margin-left: 2%;
+    text-align: start;
+}
+.ds-container-card-tecnologias-android{
+    width: 100%;
+    margin: 2%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*-------------CONTACTO ---------------*/
+.contacto-container {
+    height: 100%;
+
+    margin-top: 20%;
+
+    font-family: "Rubik", sans-serif;
+    font-weight: 900;
+    color: var(--color-grey1);
+}
+.contacto-socialNetworks {
+    width:500px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    text-align: center;
+}
+.contacto-container p:hover{
+    color: var(--color-black);
+}
