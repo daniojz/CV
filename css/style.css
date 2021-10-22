@@ -1,7 +1,8 @@
 :root {
     --color-bg: #a6deff;
+    --color-bg-dark: rgb(46, 46, 46);
     --color-bg-header: rgb(220, 242, 255);
-
+    
     --color-white: #FFFFFF;
     --color-black: #000000;
     --color-grey1: #686868;
@@ -19,7 +20,6 @@ html, body {
     margin: 0;
 
     background-color: var(--color-bg);
-
     line-height: 1.3;
 }
 header {
@@ -30,6 +30,8 @@ header {
     align-items: center;
     position: fixed;
 
+    z-index: 2000;
+
     background-color: var(--color-bg-header);
 }
 main {
@@ -39,6 +41,7 @@ main {
 
     background: rgb(166,222,255);
     background: linear-gradient(0deg, rgba(166,222,255,1) 26%, rgba(220,242,255,1) 100%);
+    color: var(--color-black);
 }
 footer {
     width: 100%;
@@ -51,6 +54,7 @@ footer {
     color: var(--bs-white);
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
+
 }
 
 
@@ -81,8 +85,29 @@ footer {
     align-items: center;
     justify-content: center;
 }
+a {
+    color: inherit;
+}
+a:hover{
+    color: var(--color-grey1);
+}
 
-
+/*----------------DARK--MODE-------------------*/
+.header-dark{
+    background-color: var(--color-bg-dark);
+    color: var(--color-white);
+}
+.header-dark a{
+    color: var(--color-white);
+}
+.main-dark {
+    background: var(--color-bg-dark);
+    color: var(--color-white);
+}
+.main-a {
+    background: var(--color-bg-dark);
+    color: var(--color-white);
+}
 
 /*-------------NAV-MAIN---------------*/
 .nav-main{
@@ -108,9 +133,6 @@ footer {
 .nav-menu li{    
     margin-left: 20px;
     margin-right: 20px;
-}
-.nav-menu a {
-    color: var(--color-black);
 }
 .nav-menu a:hover {
     color: rgba(0, 0, 0, 0.452);
@@ -173,16 +195,15 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+ 
 
-    background: rgb(166,222,255);
-    background: linear-gradient(0deg, rgba(166,222,255,1) 26%, rgba(220,242,255,1) 100%);
+    background: transparent;
 }
 .container-presentacion-text {
     width: 45%;
 
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    color: var(--color-black);
 }
 
 
@@ -196,6 +217,8 @@ footer {
     display: flex;
     justify-content: center;
 
+    box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.24);
+
     background-color: var(--color-white);
 }
 #curriculum h2 {
@@ -204,15 +227,10 @@ footer {
     text-align: center;
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
-    color: var(--color-black);
 }
 #curriculum img {
     height: 140px;
     margin: 20px;
-
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    color: var(--color-black);
 }
 #curriculum ul {
     margin: 5%;
@@ -238,9 +256,8 @@ footer {
 
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    color: var(--color-black);
-    
-    border-radius: 15px;
+
+    border-radius: 5px;
     border: 1px solid  rgba(216, 216, 216, 0.61) ;
     background-color: var(--color-white);
     box-shadow: 2px 2px 20px 0px rgba(211, 211, 211, 0.651);
@@ -257,16 +274,14 @@ footer {
 
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    color: var(--color-black);
 
-    border-radius: 15px;
+    border-radius: 5px;
     border: 1px solid  rgba(216, 216, 216, 0.61) ;
-    background-color:rgb(255, 255, 255);
+    background-color:var(--color-white)
 }
 .ds-container-title {
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
-    color: var(--color-black);
 }
 .ds-container-card-descripcion {
     margin: 3% 4% 1% 4%;
@@ -276,7 +291,6 @@ footer {
 .ds-container-card-descripcion h3 {
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
-    color: var(--color-black);
 }
 .ds-container-card-descripcion p{
     display: block;
@@ -316,6 +330,107 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+/*-------------PRODUCCION MUSICAL ---------------*/
+.pm-instrumentales {
+    width: 75%;
+    height: calc(100vh);
+    margin: 2% auto auto auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.pm-instrumentales h3{
+    width: 100%;
+    text-align: center;
+
+    margin: 3% 0px;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+.pm-instrumentales-cover-container {
+    width: 32%;
+    height: 600px;
+    
+    margin-top: 4%;
+    margin-bottom: 4%;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.pm-instrumentales-descripcion-container {
+    width: 68%;
+
+    display: flex;
+    justify-content: end;
+
+    background-color: rgba(0, 0, 0, 0.267);
+    border-radius: 8px;
+
+    font-family: "Robot", sans-serif;
+    font-weight: 500;
+    color: var(--color-white);
+}
+.pm-instrumentales-descripcion-content {
+    width: 70%;
+    padding: 5%;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: end;
+}
+.pm-instrumentales-descripcion-content-link {
+    align-self: flex-end;
+}
+.pm-instrumentales-cover {
+    width: 400px;
+    height: 400px;
+
+    position: absolute;
+    z-index: 1;
+
+    display: block;
+}
+.pm-instrumentales-cover img{
+    width: 90%;
+    height: 90%;
+}
+.pm-instrumentales-cover:hover {
+    z-index: 1000;
+}
+
+
+
+/*---COVERS---*/
+.cover1{
+    top:0px;
+    left:0px;
+}
+.cover2{
+    top: 40px;
+    left:40px;
+}
+.cover3{
+    top: 80px;
+    left:80px;
+}
+.cover4{
+    top: 120px;
+    left:120px;
+}
+.cover5{
+    top: 160px;
+    left:160px;
+}
+.cover6{
+    top: 200px;
+    left:200px;
 }
 
 /*-------------CONTACTO ---------------*/

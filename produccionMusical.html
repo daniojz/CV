@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desarrollo Software</title>
+    <title>Produccion Musical</title>
 
     
     <!--Google Fonts-->
@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-    <header> 
+    <header class="header-dark"> 
         <nav class="nav-main">
             <a href="index.html" class="nav-link-icon"><img src="img/logos/logo.png" class="web-logo"/></a>
             <ul class="nav-menu">
@@ -55,42 +55,46 @@
         </nav>
     </header>
 
-    <main>
-        <div id="DesarrolloSoftware" class="container">
-            <h2 class="ds-container-title ds-web-title">DESARROLLO WEB</h2>
-            <div class="ds-container-card">
-                <div class="ds-container-card-descripcion">
-                    <h3>Soy desarrollador de front end y back end...</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor augue et nunc sollicitudin, posuere ultricies ipsum posuere. Proin consectetur nulla vitae dui consectetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim temporibus ab quibusdam omnis! Iure voluptatum, repudiandae, excepturi aliquam ut, nihil neque nesciunt veniam sequi ducimus hic esse corporis fugit fugiat? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi cumque porro iusto tempora assumenda ea id aperiam ratione numquam minima magnam amet illo provident iste, deleniti rerum pariatur fuga corporis?</p>
-                </div>
-                <div class="ds-container-card-tecnologias">
-                    <div class="ds-container-card-tecnologias-end">
-                        <h4>FRONT END</h4>
-                        <img src="img/front-end.png"/>
+    <main class="main-dark">
+        <div class="container">
+            
+            <div id="instrumentales" class="pm-instrumentales">
+                <h3>INSTRUMENTALES / BEATS</h3>
+                <div class="pm-instrumentales-cover-container">
+                    <div class="pm-instrumentales-cover cover1">
+                        <img src="img/portadas/lost_feeling.jpg"/>
                     </div>
-                    <div class="ds-container-card-tecnologias-end">
-                        <h4>BACK END</h4>
-                        <img src="img/back-end.png"/>
+                    <div class="pm-instrumentales-cover cover2">
+                        <img src="img/portadas/nasty_silk.jpg"/>
                     </div>
-                </div>
-                <div class="ds-container-card-linkProyects">
-                    <a href="https://github.com/daniojz?tab=repositories" target="_blank">Puedes encontrar algunos de mis proyectos en mi perfil de GitHub</a>
-                </div>
-            </div>
-
-            <h2 class="ds-container-title ds-android-title">DESARROLLO DE APP´S ANDROID</h2>
-            <div class="ds-container-card">
-                <div class="ds-container-card-descripcion">
-                    <h3>Soy desarrollador de app android...</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor augue et nunc sollicitudin, posuere ultricies ipsum posuere. Proin consectetur nulla vitae dui consectetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim temporibus ab quibusdam omnis! Iure voluptatum, repudiandae, excepturi aliquam ut, nihil neque nesciunt veniam sequi ducimus hic esse corporis fugit fugiat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, fuga numquam accusamus nam facere pariatur earum qui dolor cumque saepe ullam cupiditate, rerum maiores, fugit nesciunt voluptatibus asperiores! Minus, omnis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, cupiditate. Atque, optio? Molestias ea voluptatibus officiis blanditiis provident dicta neque minima, facilis facere dolor iusto totam earum voluptates commodi ad?</p>
-                </div>
-                <div class="ds-container-card-tecnologias">
-                    <div class="ds-container-card-tecnologias-android">
-                        <img src="img/android.png"/>
+                    <div class="pm-instrumentales-cover cover3">
+                        <img src="img/portadas/psyco.jpg"/>
+                    </div>
+                    <div class="pm-instrumentales-cover cover4">
+                        <img src="img/portadas/sailing_the_streets.jpg"/>
+                    </div>
+                    <div class="pm-instrumentales-cover cover5">
+                        <img src="img/portadas/dystopia.jpg"/>
+                    </div>
+                    <div class="pm-instrumentales-cover cover6">
+                        <img src="img/portadas/nostalgico.jpg"/>
                     </div>
                 </div>
-                <div class="ds-container-card-linkProyects">
-                    <a href="https://github.com/daniojz?tab=repositories" target="_blank">Puedes encontrar algunos de mis proyectos en mi perfil de GitHub</a>
+                <div class="pm-instrumentales-descripcion-container">
+                    <div class="pm-instrumentales-descripcion-content">
+                        <p style="color: yellow;">Z-INDEX -> he creado varios div con una imagen dentro. Para que esos divs se muestren encima de ESTE contenedor, les he colocado 'z-index: 1'. 
+                            Cuando paso sobre un div, (:hover) añado un 'z-index: 1000' para que se superpongan a todos los demas elementos que tengan un z-index menor a 1000.
+                            Ademas, para que mi header (posicionado como fixed), se muestre SIEMPRE POR encima de cualquier otro elemento, he tendio que añadir un 'z-index: 2000'.
+                        </p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis officia maiores excepturi alias odit! Debitis blanditiis cupiditate facilis labore ipsa, harum illo recusandae neque optio porro eligendi delectus laborum modi.</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, earum optio maiores doloremque, quae at labore itaque nostrum neque temporibus assumenda dolore accusantium dicta placeat, dolor non. Maiores, ratione adipisci?
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque cupiditate ipsam veritatis sit possimus, ut voluptate nam, aspernatur tempora cum adipisci! Earum commodi aspernatur quidem ducimus, facilis nisi quaerat perspiciatis?
+                        </p>
+                        <br>
+                        <p class="pm-instrumentales-descripcion-content-link"><a href="https://www.youtube.com/channel/UCDvO-SqZWq8fAJkKWfHWEeA/videos" target="_blank">Puedes escuchar mis instrumentales en mi canal de youtube pinchando aquí.</a></p>
+                    </div>
                 </div>
             </div>
         </div>
