@@ -2,7 +2,8 @@
     --color-bg: #a6deff;
     --color-bg-dark: rgb(46, 46, 46);
     --color-bg-header: rgb(220, 242, 255);
-    
+    --color-bg-header-small: rgba(0, 0, 0, 0.911);
+
     --color-white: #FFFFFF;
     --color-black: #000000;
     --color-grey1: #686868;
@@ -26,10 +27,7 @@ header {
     width: 100%;
     height: 80px;
 
-    display: flex;
-    align-items: center;
     position: fixed;
-
     z-index: 2000;
 
     background-color: var(--color-bg-header);
@@ -59,6 +57,14 @@ footer {
 
 
 /*--------GENERAL----------*/
+.header-container {
+    width: 100%;
+    padding: 0 1% 0 1%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .container {
     width: 95%;
     margin: auto;
@@ -73,6 +79,7 @@ footer {
 .web-logo {
     width: 45px;
     height: 45px;
+    display: block;
 }
 .socialNetworks li{
     margin-left: 7px;
@@ -92,23 +99,6 @@ a:hover{
     color: var(--color-grey1);
 }
 
-/*----------------DARK--MODE-------------------*/
-.header-dark{
-    background-color: var(--color-bg-dark);
-    color: var(--color-white);
-}
-.header-dark a{
-    color: var(--color-white);
-}
-.main-dark {
-    background: var(--color-bg-dark);
-    color: var(--color-white);
-}
-.main-a {
-    background: var(--color-bg-dark);
-    color: var(--color-white);
-}
-
 /*-------------NAV-MAIN---------------*/
 .nav-main{
     width: 100%;
@@ -116,9 +106,6 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.nav-link-icon {
-    margin-left: 1%;
 }
 .nav-main li {
     display: inline-block;
@@ -137,8 +124,15 @@ a:hover{
 .nav-menu a:hover {
     color: rgba(0, 0, 0, 0.452);
 }
-.nav-main .socialNetworks {
-    margin-right: 3%;
+#menu-icon{
+    width: 45px;
+    height: 45px;
+    display: none;
+    text-align: center;
+    font-size: 1.5em;
+}
+#menu-icon:hover{
+    cursor: pointer;
 }
 /*-------------FOOTER---------------*/
 .footer-socialNetworks{
@@ -167,6 +161,7 @@ a:hover{
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
     font-size: 14px;
     font-weight: 400;
@@ -176,7 +171,8 @@ a:hover{
     columns: 2;
 }
 .footer-links li{
-    padding-right: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
     list-style: none;
     line-height: 3ex;
 }
@@ -188,14 +184,13 @@ a:hover{
 }
 
 /*-------------PRESENTACION---------------*/
-#presentacion{
+.container-presentacion{
     width: 100%;
     height: calc(100vh - 124px);
 
     display: flex;
     align-items: center;
     justify-content: center;
- 
 
     background: transparent;
 }
@@ -204,6 +199,7 @@ a:hover{
 
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
+    
 }
 
 
@@ -228,25 +224,25 @@ a:hover{
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
 }
-#curriculum img {
-    height: 140px;
-    margin: 20px;
-}
-#curriculum ul {
-    margin: 5%;
-    float: left;
-
-    list-style: none;
-}
 #curriculum li {
     margin-bottom: 3%;
 }
+.curriculum-content {
+    display: flex;
+    justify-content: center;    
+}
 .curriculum-container {
+    width: 100%;
     height: 100%;
     margin: 3%;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
 }
-.curriculum-container-card{
-    max-width: 600px;
+.curriculum-container-card {
+    width: 100%;
+    min-height: 150px;
     margin-bottom: 4%;
 
     display: flex;
@@ -256,6 +252,7 @@ a:hover{
 
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
+    font-size: 1em;
 
     border-radius: 5px;
     border: 1px solid  rgba(216, 216, 216, 0.61) ;
@@ -266,7 +263,20 @@ a:hover{
 .curriculum-container-card:hover {
     box-shadow: none;
 }
-
+.curriculum-container-card-list{
+    width: 70%;
+    margin-left: 5%;
+    margin-right: 5%;
+    float: left;
+    list-style: none;
+}
+.curriculum-container-card-image {
+    width: 20%;
+    margin: 2%;
+}
+.curriculum-container-card-image img {
+    width: 100%;
+}
 /*-------------DESARROLLO SOFTWARE------------------------*/
 .ds-container-card {
     width: 100%;
@@ -300,7 +310,7 @@ a:hover{
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 .ds-container-card img{
     height: 270px;  
@@ -314,7 +324,7 @@ a:hover{
     text-align: end;
 }
 .ds-container-card-tecnologias-end{
-    width: 50%;
+    width: auto;
     margin: 3%;
     text-align: center;
 }
@@ -334,12 +344,13 @@ a:hover{
 /*-------------PRODUCCION MUSICAL ---------------*/
 .pm-instrumentales {
     width: 75%;
-    height: calc(100vh);
-    margin: 2% auto auto auto;
+    margin: auto;
+    padding: 5%;
 
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+    justify-content: center;
 }
 .pm-instrumentales h3{
     width: 100%;
@@ -352,8 +363,11 @@ a:hover{
     font-size: 1.5em;
 }
 .pm-instrumentales-cover-container {
-    width: 32%;
-    height: 600px;
+    width: 100%;
+    min-height: 700px;
+}
+.pm-instrumentales-cover-content {
+    width: 100%;
     
     margin-top: 4%;
     margin-bottom: 4%;
@@ -363,8 +377,12 @@ a:hover{
     justify-content: center;
     align-items: flex-end;
 }
-.pm-instrumentales-descripcion-container {
-    width: 68%;
+.pm-instrumentales-descripcion-content-video{
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+.pm-instrumentales-descripcion-container{
+    width: 70%;
 
     display: flex;
     justify-content: end;
@@ -389,8 +407,7 @@ a:hover{
     align-self: flex-end;
 }
 .pm-instrumentales-cover {
-    width: 400px;
-    height: 400px;
+    width: 100%;
 
     position: absolute;
     z-index: 1;
@@ -398,14 +415,9 @@ a:hover{
     display: block;
 }
 .pm-instrumentales-cover img{
-    width: 90%;
-    height: 90%;
+    width: 30%;
+    height: 30%;
 }
-.pm-instrumentales-cover:hover {
-    z-index: 1000;
-}
-
-
 
 /*---COVERS---*/
 .cover1{
@@ -454,3 +466,133 @@ a:hover{
 .contacto-container p:hover{
     color: var(--color-black);
 }
+
+/*----------------DARK--MODE-------------------*/
+.header-dark{
+    background-color: var(--color-bg-dark);
+    color: var(--color-white);
+}
+.header-dark a{
+    color: var(--color-white);
+}
+.main-dark {
+    background: var(--color-bg-dark);
+    color: var(--color-white);
+}
+.main-a {
+    background: var(--color-bg-dark);
+    color: var(--color-white);
+}
+
+/*----------------MEDIA--QUERYS-------------------------*/
+@media all and (min-width: 1010px) {
+    header {
+        height: 80px;
+    
+        display: flex;
+        align-items: center;
+    
+        background-color: var(--color-bg-header);
+    }
+}
+@media all and (max-width: 1010px) {
+    /*GENERAL-CLASS*/
+    .container {
+        flex-wrap: wrap;
+    }
+    /*HEADER*/
+    header {
+        height: auto;
+        padding: 1% 0 1% 0;
+    }
+    .header-open {
+        height: 100%;
+        background-color: var(--color-bg-header-small);
+        color: white;
+        font-size: 18px;
+    }
+    .header-open .nav-main {
+        display: flex;
+        flex-direction: column;
+    }
+    .header-open .header-container {
+        padding-top: 1%;
+        align-items: flex-start;
+    }
+    .header-open .nav-menu a:hover {
+        color: rgb(128, 128, 128);
+    }
+    .header-open #menu-icon {
+        color: white;
+    }
+
+    .header-container{
+        width: auto;
+        height: 100%;
+    }
+    .nav-main{
+        height: 100%;
+        
+        align-content: center;
+        justify-content: center;
+        display: none;
+    }
+    .nav-menu li {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        text-align: center;
+    }
+    .nav-menu {
+        width: 100%;
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .nav-main .socialNetworks {
+        margin: 5% 0 0 0;
+    }
+    #menu-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*PRESENTACION*/
+    .container-presentacion{
+    }
+    .container-presentacion-text {
+        width: 75%;
+    }
+    /*CURRICULUM*/
+    .curriculum-container-card {
+        font-size: 0.9em;
+    }
+
+    /*DESARROLLO-SOFTWARE*/
+    .ds-container-card-tecnologias {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .ds-container-card img{
+        width: 65%; 
+        height: 65%; 
+    }
+    /*FOOTER*/
+    footer {
+        height: auto;
+
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-socialNetworks, .footer-icon, .footer-links{
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .footer-socialNetworks p{
+        display: none;
+    }
+}
+
