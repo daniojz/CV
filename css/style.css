@@ -11,6 +11,8 @@
     --color-Primary1: #a6deff;
     --color-Primary2: #003858;
     --color-Secondary1: #D7E7FF;
+
+    --color-play-button:rgb(24, 192, 2);
 }
 
 html, body {
@@ -148,6 +150,9 @@ a:hover{
 .footer-socialNetworks ul{
     display: flex;
     align-items: center;
+}
+.footer-socialNetworks p {
+    padding: 0 5%;
 }
 .footer-icon {
     width: 40%;
@@ -352,98 +357,153 @@ a:hover{
     align-content: flex-start;
     justify-content: center;
 }
-.pm-instrumentales h3{
+.pm-instrumentales-container {
+    padding: 3% 0px;
+    background: rgb(166,222,255);
+    background: linear-gradient(0deg, rgba(166, 222, 255, 0.507) 0%, rgba(255,255,255,0) 100%);
+}
+.pm-instrumentales-container h3{
     width: 100%;
     text-align: center;
 
-    margin: 3% 0px;
+    margin: 1% 0 5% 0;
 
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
     font-size: 1.5em;
 }
-.pm-instrumentales-cover-container {
-    width: 100%;
-    min-height: 700px;
+.pm-instrumentales-container-descripcion {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
-.pm-instrumentales-cover-content {
+.pm-instrumentales-container-beats {
     width: 100%;
-    
-    margin-top: 4%;
-    margin-bottom: 4%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.pm-instrumentales-descripcion-content-beats-beat{
+    width: 15%;
+    height: 15%;
+    margin: 4%;
 
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+
+    overflow: hidden;
+    border-radius: 2%;
+
+    box-shadow: 20px 5px 30px rgba(0, 0, 0, 0.137);
 }
-.pm-instrumentales-descripcion-content-video{
-    margin-top: 8%;
-    margin-bottom: 8%;
-}
-.pm-instrumentales-descripcion-container{
-    width: 70%;
-
-    display: flex;
-    justify-content: end;
-
-    background-color: rgba(0, 0, 0, 0.267);
-    border-radius: 8px;
-
-    font-family: "Robot", sans-serif;
-    font-weight: 500;
-    color: var(--color-white);
-}
-.pm-instrumentales-descripcion-content {
-    width: 70%;
-    padding: 5%;
-
-    display: flex;
-    flex-direction: column;
-
-    text-align: end;
-}
-.pm-instrumentales-descripcion-content-link {
-    align-self: flex-end;
-}
-.pm-instrumentales-cover {
-    width: 100%;
-
-    position: absolute;
-    z-index: 1;
-
+.pm-instrumentales-descripcion-content-beats-beat a{
+    line-height: 0px;
     display: block;
 }
-.pm-instrumentales-cover img{
-    width: 30%;
-    height: 30%;
+.pm-instrumentales-descripcion-content-beats-beat:hover{
+    box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.041);
+}
+.beat-cover {
+    width: 100%;
+    height: 100%;
+}
+.beat-play-button{
+    width: 15%;
+    height: 15%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 80%;
+    left: 80%;
+
+    border-radius: 50%;
+    border: none;
+    box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.363);
+
+    background-color: var(--color-play-button);
+    color: white;
+}
+.beat-play-button i{
+    margin-left: 3px;
+    font-size: 1.2vh;
+}
+.beat-play-button:hover{
+    cursor: pointer;
+    color: white;
+    box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.075);
 }
 
-/*---COVERS---*/
-.cover1{
-    top:0px;
-    left:0px;
+/*-------PHOTOS-INTRO----------*/
+.pm-photos-container {
+    height: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    padding: 0% 8% 0% 8%;
 }
-.cover2{
-    top: 40px;
-    left:40px;
+.pm-photos-layer{
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 1%;
+    display: flex;
+    position: relative;
 }
-.cover3{
-    top: 80px;
-    left:80px;
+.pm-photos-layer.frontlayer{
+    z-index: 100;
 }
-.cover4{
-    top: 120px;
-    left:120px;
+.pm-photos-layer.backlayer{
+    z-index: 0;
 }
-.cover5{
-    top: 160px;
-    left:160px;
+.photo-container {
+    width: 100%;
+    display: flex;
 }
-.cover6{
-    top: 200px;
-    left:200px;
+.layer1-photo{
+    display: flex;
+    justify-content: flex-end;
 }
+.layer2-photo{
+    display: flex;
+    justify-content: flex-start;
+}
+.layer3-photo{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -200px;
+}
+.layer4-photo{
+    display: flex;
+    justify-content: flex-end;
+}
+.layer5-photo {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 150px;
+    left: -850px;
+}
+.layer1-photo img{
+    height: 350px;
+}
+.layer2-photo img{
+    height: 410px;
+}
+.layer3-photo img{
+    height: 500px;
+    opacity: 80%;
+}
+.layer4-photo img{
+    height: 550px;
+    margin-right: 10%;
+}
+.layer5-photo img{
+    height: 400px;
+    opacity: 30%;
+}
+
 
 /*-------------CONTACTO ---------------*/
 .contacto-container {
@@ -558,6 +618,22 @@ a:hover{
         justify-content: center;
         align-items: center;
     }
+    /*FOOTER*/
+    footer {
+        height: auto;
+
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-socialNetworks, .footer-icon, .footer-links{
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .footer-socialNetworks p{
+        display: none;
+    }
     /*PRESENTACION*/
     .container-presentacion{
     }
@@ -578,21 +654,40 @@ a:hover{
         width: 65%; 
         height: 65%; 
     }
-    /*FOOTER*/
-    footer {
+    /*----PRODUCCION-MUSICAL-----*/
+    .pm-photos-layer{
         height: auto;
-
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
+        margin: 0 0 10% 0;
     }
-    .footer-socialNetworks, .footer-icon, .footer-links{
-        width: 100%;
-        margin-top: 5%;
-        margin-bottom: 5%;
+    .photo-container{
+        overflow: hidden;
     }
-    .footer-socialNetworks p{
+    .backlayer{
         display: none;
     }
+    .pm-instrumentales-descripcion-content-beats-beat {
+        width: 40%;
+        height: 40%;
+    }
+    .beat-play-button i{
+        margin-left: 2px;
+        font-size: 2.5vh;
+    }
 }
+
+@media all and (max-width: 768px) {
+    .beat-play-button i{
+        margin-left: 2px;
+        font-size: 2vh;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .beat-play-button i{
+        margin-left: 2px;
+        font-size: 1vh;
+    }
+}
+
+
 

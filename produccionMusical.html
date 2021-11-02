@@ -63,58 +63,82 @@
 
     <main class="main-dark">
         <div class="container">
-            
-            <div id="instrumentales" class="pm-instrumentales">
-                <h3>INSTRUMENTALES / BEATS</h3>
-                <div class="pm-instrumentales-cover-container">
-                    <div class="pm-instrumentales-cover-content">
-                        <div class="pm-instrumentales-cover cover1">
-                            <img src="img/portadas/lost_feeling.jpg"/>
-                        </div>
-                        <div class="pm-instrumentales-cover cover2">
-                            <img src="img/portadas/nasty_silk.jpg"/>
-                        </div>
-                        <div class="pm-instrumentales-cover cover3">
-                            <img src="img/portadas/psyco.jpg"/>
-                        </div>
-                        <div class="pm-instrumentales-cover cover4">
-                            <img src="img/portadas/sailing_the_streets.jpg"/>
-                        </div>
-                        <div class="pm-instrumentales-cover cover5">
-                            <img src="img/portadas/dystopia.jpg"/>
-                        </div>
-                        <div class="pm-instrumentales-cover cover6">
-                            <img src="img/portadas/nostalgico.jpg"/>
-                        </div>
-                    </div>
+            <div id="photos" class="pm-photos-container">
+                <div class="pm-photos-layer frontlayer">
+                    <div class="photo-container layer1-photo"><img src="img/photos/photo1.jpg"/></div>
                 </div>
-                <div class="pm-instrumentales-descripcion-container">
-                    <div class="pm-instrumentales-descripcion-content">
-                        <p style="color: yellow;">Z-INDEX -> he creado varios div con una imagen dentro. Para que esos divs se muestren encima de ESTE contenedor, les he colocado 'z-index: 1'. 
-                            Cuando paso sobre un div, (:hover) añado un 'z-index: 1000' para que se superpongan a todos los demas elementos que tengan un z-index menor a 1000.
-                            Ademas, para que mi header (posicionado como fixed), se muestre SIEMPRE POR encima de cualquier otro elemento, he tendio que añadir un 'z-index: 2000'.
-                        </p>
-                        <br>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis officia maiores excepturi alias odit! Debitis blanditiis cupiditate facilis labore ipsa, harum illo recusandae neque optio porro eligendi delectus laborum modi.</p>
-                        <br>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, earum optio maiores doloremque, quae at labore itaque nostrum neque temporibus assumenda dolore accusantium dicta placeat, dolor non. Maiores, ratione adipisci?
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque cupiditate ipsam veritatis sit possimus, ut voluptate nam, aspernatur tempora cum adipisci! Earum commodi aspernatur quidem ducimus, facilis nisi quaerat perspiciatis?
-                        </p>
-                        <br>
-                        <div class="pm-instrumentales-descripcion-content-video">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/FYswBHSJxOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <p class="pm-instrumentales-descripcion-content-link"><a href="https://www.youtube.com/channel/UCDvO-SqZWq8fAJkKWfHWEeA/videos" target="_blank">Puedes escuchar mis instrumentales en mi canal de youtube pinchando aquí.</a></p>
-                    </div>
+                <div class="pm-photos-layer backlayer">
+                    <div class="photo-container layer3-photo"><img src="img/photos/photo3-blur.png"/></div>
+                </div>
+                <div class="pm-photos-layer frontlayer">
+                    <div class="photo-container layer2-photo"><img src="img/photos/photo2.jpg"/></div>
+                </div>
+                <div class="pm-photos-layer backlayer">
+                    <div class="photo-container layer5-photo"><img src="img/photos/photo4.png"/></div>
+                </div>
+                <div class="pm-photos-layer frontlayer">
+                    <div class="photo-container layer4-photo"><img src="img/photos/photo3.jpg"/></div>
                 </div>
             </div>
+            <div class="pm-instrumentales-container">
+                <h3>MIS INSTRUMENTALES / BEATS</h3>
+                <div class="pm-instrumentales-container-beats">
+                    <div class="pm-instrumentales-descripcion-content-beats-beat">
+                        <a href="https://www.youtube.com/watch?v=AmUDjV-WmUU&t=122s" target="_blank">
+                            <button href="https://www.youtube.com/watch?v=AmUDjV-WmUU&t=122s" class="beat-play-button"><i class="fas fa-play"></i></button>
+                            <img class="beat-cover" src="img/portadas/tears.jpg"/>
+                        </a>
+                    </div>
+                    <div class="pm-instrumentales-descripcion-content-beats-beat">
+                        <a href="https://www.youtube.com/watch?v=EdyVLIvJIAE" target="_blank">
+                            <button href="https://www.youtube.com/watch?v=EdyVLIvJIAE" class="beat-play-button"><i class="fas fa-play"></i></button>
+                            <img class="beat-cover" src="img/portadas/psyco.jpg"/>
+                        </a>
+                    </div>
+                    <div class="pm-instrumentales-descripcion-content-beats-beat">
+                        <a href="https://www.youtube.com/watch?v=03gxuIkMf0Q" target="_blank">
+                            <button href="https://www.youtube.com/watch?v=03gxuIkMf0Q" class="beat-play-button"><i class="fas fa-play"></i></button>
+                            <img class="beat-cover" src="img/portadas/dystopia.jpg"/>
+                        </a>
+                    </div>
+                    <div class="pm-instrumentales-descripcion-content-beats-beat">
+                        <a href="https://www.youtube.com/watch?v=FYswBHSJxOY" target="_blank">
+                            <button href="https://www.youtube.com/watch?v=FYswBHSJxOY" class="beat-play-button"><i class="fas fa-play"></i></button>
+                            <img class="beat-cover" src="img/portadas/illusion.jpg"/>
+                        </a>
+                    </div>
+                    <div class="pm-instrumentales-descripcion-content-beats-beat">
+                        <a href="https://www.youtube.com/watch?v=PpeVjBORymQ" target="_blank">
+                            <button href="https://www.youtube.com/watch?v=PpeVjBORymQ" class="beat-play-button"><i class="fas fa-play"></i></button>
+                            <img class="beat-cover" src="img/portadas/sailing_the_streets.jpg"/>
+                        </a>
+                    </div>
+                    <div class="pm-instrumentales-descripcion-content-beats-beat">
+                        <a href="https://www.youtube.com/watch?v=o1l-pS6Ywc4" target="_blank">
+                            <button href="https://www.youtube.com/watch?v=o1l-pS6Ywc4" class="beat-play-button"><i class="fas fa-play"></i></button>
+                            <img class="beat-cover" src="img/portadas/nostalgico.jpg"/>
+                        </a>
+                    </div>
+                    <div class="pm-instrumentales-descripcion-content-beats-beat">
+                        <a href="https://youtu.be/40phBpAvb1o" target="_blank">
+                            <button href="https://youtu.be/40phBpAvb1o" class="beat-play-button"><i class="fas fa-play"></i></button>
+                            <img class="beat-cover" src="img/portadas/breath.jpg"/>
+                        </a>
+                    </div>
+                    <div class="pm-instrumentales-descripcion-content-beats-beat">
+                        <a href="https://www.youtube.com/watch?v=3vnxAT2s2XY" target="_blank">
+                            <button href="https://www.youtube.com/watch?v=3vnxAT2s2XY" class="beat-play-button"><i class="fas fa-play"></i></button>
+                            <img class="beat-cover" src="img/portadas/lost_feeling.jpg"/>
+                        </a>
+                    </div>
+                </div>
         </div>
     </main>
 
     <footer>
         <div class="footer-socialNetworks">
+            <p>Follow me:</p>
             <ul class="socialNetworks">
-                <p>Follow me: &nbsp &nbsp</p>
                 <li>
                     <a href="" target="_blank">
                     <svg class="svgIcons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path d="M941.3 296.1a112.3 112.3 0 0 0-79.2-79.3C792.2 198 512 198 512 198s-280.2 0-350.1 18.7A112.12 112.12 0 0 0 82.7 296C64 366 64 512 64 512s0 146 18.7 215.9c10.3 38.6 40.7 69 79.2 79.3C231.8 826 512 826 512 826s280.2 0 350.1-18.8c38.6-10.3 68.9-40.7 79.2-79.3C960 658 960 512 960 512s0-146-18.7-215.9zM423 646V378l232 133l-232 135z"/></svg>    
