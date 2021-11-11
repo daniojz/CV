@@ -45,7 +45,7 @@ main {
 }
 footer {
     width: 100%;
-    height: 15%;
+    height: 25%;
 
     display: flex;
     justify-content: center;
@@ -69,6 +69,7 @@ footer {
 }
 .container {
     width: 95%;
+    max-width: 1800px;
     margin: auto;
 }
 .svgIcons {
@@ -170,6 +171,10 @@ a:hover{
 
     font-size: 14px;
     font-weight: 400;
+    text-decoration: underline;
+}
+.footer-links:hover {
+    text-decoration: none;
 }
 .footer-links ul{
     list-style: disc;
@@ -196,6 +201,7 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 
     background: transparent;
 }
@@ -205,6 +211,18 @@ a:hover{
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     
+}
+.container-presentacion-down {
+    width: 10%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+}
+.container-presentacion-down img{
+    width: 30px;
+    position: absolute;
+    top: calc(100vh - 110px);
 }
 
 
@@ -310,15 +328,22 @@ a:hover{
 .ds-container-card-descripcion p{
     display: block;
 }
-.ds-container-card-tecnologias {
+.ds-container-card-tecnologias-android {
     width: 100%;
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.ds-container-card-tecnologias-end {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
 .ds-container-card img{
-    height: 270px;  
+    width: 370px;  
 }
 .ds-container-card-linkProyects {
     margin: 3%;
@@ -328,15 +353,15 @@ a:hover{
     margin-right: 2%;
     text-align: end;
 }
-.ds-container-card-tecnologias-end{
-    width: auto;
+.ds-container-card-tecnologias-end-item{
+    width: 100%;
     margin: 3%;
     text-align: center;
 }
-.ds-container-card-tecnologias-end:last-child{ /*probando order*/
+.ds-container-card-tecnologias-end-item:last-child{ /*probando order*/
     order: 1;
 }
-.ds-container-card-tecnologias-end:first-child{ /*probando order*/
+.ds-container-card-tecnologias-end-item:first-child{ /*probando order*/
     order: 5;
 }
 /*-------------DESARROLLO DE APP´S ANDROID---------------*/
@@ -344,7 +369,7 @@ a:hover{
     margin-left: 2%;
     text-align: start;
 }
-.ds-container-card-tecnologias-android{
+.ds-container-card-tecnologias-android-item{
     width: 100%;
     margin: 2%;
 
@@ -364,6 +389,9 @@ a:hover{
     justify-content: center;
 }
 .pm-instrumentales-container {
+    width: 100%;
+    height: 100%;
+
     padding: 3% 0px;
     background: rgb(166,222,255);
     background: linear-gradient(0deg, rgba(166, 222, 255, 0.507) 0%, rgba(255,255,255,0) 100%);
@@ -384,30 +412,24 @@ a:hover{
 }
 .pm-instrumentales-container-beats {
     width: 100%;
+    height: 100%;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    column-gap: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 40px;
+    justify-items: center;
 }
-.pm-instrumentales-descripcion-content-beats-beat{
-    width: 15%;
-    height: 15%;
-    margin: 2%;
+.pm-instrumentales-container-beats-beat{
+    width: 55%;
 
     position: relative;
 
     overflow: hidden;
     border-radius: 2%;
-
-    box-shadow: 20px 5px 30px rgba(0, 0, 0, 0.137);
 }
-.pm-instrumentales-descripcion-content-beats-beat a{
+.pm-instrumentales-container-beats-beat a{
     line-height: 0px;
     display: block;
-}
-.pm-instrumentales-descripcion-content-beats-beat:hover{
-    box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.041);
 }
 .beat-cover {
     width: 100%;
@@ -445,72 +467,66 @@ a:hover{
 /*-------PHOTOS-INTRO----------*/
 .pm-photos-container {
     height: auto;
-    margin-top: 5%;
-    margin-bottom: 10%;
-    padding: 0% 8% 0% 8%;
+    margin: 5%;
+
+    display: grid;
+    grid-template-columns: 1fr;
 }
 .pm-photos-layer{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+}
+.pm-photos-layer img{
     width: 100%;
-    height: auto;
+}
 
-    margin-bottom: 1%;
-    display: flex;
+.layer-photo1 {
+    grid-row: 1;
+    grid-column: 9 / 13;
+
+    z-index: 1;
+}
+.layer-photo2 {
+    grid-row: 1;
+    grid-column: 4 / 10;
+
+    position: relative;
+    top: 90px;
+}
+.layer-photo3 {
+    grid-row: 1;
+    grid-column: 1 / 7;
+
+    position: relative;
+    top: -50px;
+    
+    z-index: 1;
+}
+.layer-photo4 {
+    grid-row: 1;
+    grid-column: 2 / 8;
+    
+    position: relative;
+    top: -50px;
+}
+.layer-photo5 {
+    grid-row: 1;
+    grid-column: 9 / 13;
+}
+
+.layer-title {
+    align-self: center;
+
+    grid-row: 1;
+    grid-column: 8 / 11;
+
+    font-family: "Rubik", sans-serif;
+    font-weight: 900;
+    font-size: 2.5em;
+
     position: relative;
 }
-.pm-photos-layer.frontlayer{
-    z-index: 100;
-}
-.pm-photos-layer.backlayer{
-    z-index: 0;
-}
-.photo-container {
-    width: 100%;
-    display: flex;
-}
-.layer1-photo{
-    display: flex;
-    justify-content: flex-end;
-}
-.layer2-photo{
-    display: flex;
-    justify-content: flex-start;
-}
-.layer3-photo{
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: -200px;
-}
-.layer4-photo{
-    display: flex;
-    justify-content: flex-end;
-}
-.layer5-photo {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    top: 150px;
-    left: -850px;
-}
-.layer1-photo img{
-    height: 350px;
-}
-.layer2-photo img{
-    height: 410px;
-}
-.layer3-photo img{
-    height: 500px;
-    opacity: 80%;
-}
-.layer4-photo img{
-    height: 550px;
-    margin-right: 10%;
-}
-.layer5-photo img{
-    height: 400px;
-    opacity: 30%;
-}
-
 
 /*-------------CONTACTO ---------------*/
 .contacto-container {
@@ -530,57 +546,47 @@ a:hover{
 .contacto-lista{
     height: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-areas: "youtube instagram"
+                         "github soundcloud"
 }
-.contacto-lista li{
-    min-width: 50px;
-    height: 100px;
+.contacto-lista-box {
+    width: 100%;
+    height: 100%;
+
+    background-color: black;
+}
+.contacto-lista div {
+    background-color: black;
+}
+.contacto-lista-box :first-child{
+    grid-area: youtube;
+}
+.contacto-lista-box :nth-child(2){
+    grid-area: github;
+}
+.contacto-lista-box :nth-child(3){
+    grid-area: instagram;
+}
+.contacto-lista-box :nth-child(4){
+    grid-area: soundcloud;
+}
 
 
-    display: flex;
-    place-content: center center;
-    flex-basis: 300px;
-
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 10px;
-
-    background-color: var(--color-black);
-}
-.contacto-lista li:first-child{
-    flex-grow: 1;
-    flex-shrink: 4;
-    background-color: rgb(172, 20, 20);
-}
-.contacto-lista li:nth-child(2){
-    flex-grow: 2;
-    flex-shrink: 3;
-    background-color: rgb(45, 42, 255);
-}
-.contacto-lista li:nth-child(3){
-    flex-grow: 3;
-    flex-shrink: 2;
-    background-color: rgb(92, 92, 92);
-}
-.contacto-lista li:last-child{
-    flex-grow: 4;
-    flex-shrink: 1;
-    background-color: rgb(255, 72, 0);
-}
-.contacto-lista li svg{
+.contacto-lista div svg{
     fill: white;
 }
-.contacto-lista li a{
+.contacto-lista div a{
     width: 100%;
     height: 100%;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
-.contacto-lista li:hover {
-    background: rgb(0, 0, 0);
+.contacto-lista div:hover {
+    background: rgb(44, 44, 44);
 }
 .contacto-correo {
     margin: 2%;
@@ -591,6 +597,7 @@ a:hover{
 /*----------------DARK--MODE-------------------*/
 .header-dark{
     background-color: var(--color-bg-dark);
+    background-image: url(../img/artist_logo/fondo.jpg);
     color: var(--color-white);
 }
 .header-dark a{
@@ -598,6 +605,8 @@ a:hover{
 }
 .main-dark {
     background: var(--color-bg-dark);
+    background-image: url(../img/artist_logo/fondo.jpg);
+    background-size: cover;
     color: var(--color-white);
 }
 .main-a {
@@ -707,13 +716,8 @@ a:hover{
     }
 
     /*DESARROLLO-SOFTWARE*/
-    .ds-container-card-tecnologias {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
     .ds-container-card img{
-        width: 65%; 
-        height: 65%; 
+        width: 300px; 
     }
     /*----PRODUCCION-MUSICAL-----*/
     .pm-photos-layer{
@@ -726,9 +730,9 @@ a:hover{
     .backlayer{
         display: none;
     }
-    .pm-instrumentales-descripcion-content-beats-beat {
-        width: 40%;
-        height: 40%;
+    .pm-instrumentales-container-beats {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 3% 0%;
     }
     .beat-play-button i{
         margin-left: 2px;
@@ -737,16 +741,88 @@ a:hover{
 }
 
 @media all and (max-width: 768px) {
+    /*----PRODUCCION-MUSICAL-----*/
     .beat-play-button i{
         margin-left: 2px;
         font-size: 2vh;
     }
+    .pm-instrumentales-container-beats {
+        grid-template-columns: 1fr 1fr;
+    }
+    .layer-title {
+        font-size: 1.6em;
+    }
+
+    /*DESARROLLO-SOFTWARE*/
+    .ds-container-card-tecnologias-end {
+        grid-template-columns: 1fr;
+    }
+
+    /*-------PHOTOS-INTRO----------*/
+    .pm-photos-layer{
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .pm-photos-layer img{
+        width: 100%;
+    }
+    .layer-photo1 {
+        grid-column: 4 / 7;
+
+        z-index: 1;
+    }
+    .layer-photo2 {
+        grid-column: 1 / 5;
+
+        position: relative;
+        top: 50px;
+        left: 30px;
+    }
+    .layer-photo3 {
+        grid-column: 1 / 5;
+
+        position: relative;
+        top: 0px;
+        z-index: 1;
+    }
+    .layer-photo4 {
+        grid-column: 1 / 7;
+
+        position: relative;
+        top: -80px;
+        opacity: 50%;
+    }
+    .layer-photo5 {
+        grid-column: 3 / 7;
+
+        position: relative;
+        z-index: 1;
+    }
+
+    .layer-title {
+        margin-left: 10%;
+        grid-column: 5 / 7;
+        font-size: 1.5em;
+    }
+
 }
 
 @media all and (max-width: 576px) {
+    /*----PRODUCCION-MUSICAL-----*/
+    .pm-instrumentales-container-beats {
+        padding: 5% 0%;
+    }
+    .pm-instrumentales-container h3{
+        font-size: 1.3em;
+    }
+    .pm-instrumentales-container-beats-beat{
+        width: 65%;
+    }
     .beat-play-button i{
         margin-left: 2px;
         font-size: 1vh;
+    }
+    .layer-title {
+        font-size: 1em;
     }
 }
 
